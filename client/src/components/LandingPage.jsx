@@ -178,13 +178,15 @@ export default function LandingPage({ user, setUser }) {
         </div>
 
         <div data-aos="fade-up" aos-duration="740" className="landing-steps-grid">
-          {[1,2,3].map(i => (
+          {[1, 2, 3].map(i => (
             <div key={i} className="landing-step">
               <div className="landing-step-number">
                 <span className="landing-step-number-text">{i}</span>
               </div>
               <h3 data-aos="fade-up" className="landing-step-title">{t(`homepage.step_${i}_title`)}</h3>
-              <p data-aos="fade-up" data-aos-duration="740" className="landing-step-description">{t(`homepage.step_${i}_desc`)}</p>
+              <p data-aos="fade-up" data-aos-duration="740" className="landing-step-description">
+                {t(`homepage.step_${i}_desc`)}
+              </p>
             </div>
           ))}
         </div>
